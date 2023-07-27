@@ -32,6 +32,7 @@
 		EFAC8BFE2A6EFC7A00CC74A3 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFAC8BEB2A6EFC7A00CC74A3 /* MaterialIcons.ttf */; };
 		EFAC8BFF2A6EFC7A00CC74A3 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFAC8BEC2A6EFC7A00CC74A3 /* MaterialCommunityIcons.ttf */; };
 		EFAC8C002A6EFC7A00CC74A3 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFAC8BED2A6EFC7A00CC74A3 /* EvilIcons.ttf */; };
+		EFC168DC2A72464D004F969B /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC168DB2A72464D004F969B /* CoreNFC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		EFAC8BEB2A6EFC7A00CC74A3 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		EFAC8BEC2A6EFC7A00CC74A3 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		EFAC8BED2A6EFC7A00CC74A3 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = EvilIcons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		EFC168DA2A7236A0004F969B /* SampleNativeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = SampleNativeApp.entitlements; path = SampleNativeApp/SampleNativeApp.entitlements; sourceTree = "<group>"; };
+		EFC168DB2A72464D004F969B /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-SampleNativeApp.a in Frameworks */,
+				EFC168DC2A72464D004F969B /* CoreNFC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +140,7 @@
 		13B07FAE1A68108700A75B9A /* SampleNativeApp */ = {
 			isa = PBXGroup;
 			children = (
+				EFC168DA2A7236A0004F969B /* SampleNativeApp.entitlements */,
 				EF221E3C2A6E26C50038AC9D /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -170,6 +175,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFC168DB2A72464D004F969B /* CoreNFC.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-SampleNativeApp.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-SampleNativeApp-SampleNativeAppTests.a */,
@@ -604,6 +610,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SampleNativeApp/SampleNativeApp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J67B5M4HQ4;
 				ENABLE_BITCODE = NO;
@@ -618,7 +625,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.sample.app;
 				PRODUCT_NAME = SampleNativeApp;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -632,6 +639,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SampleNativeApp/SampleNativeApp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J67B5M4HQ4;
 				INFOPLIST_FILE = SampleNativeApp/Info.plist;
@@ -645,7 +653,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.sample.app;
 				PRODUCT_NAME = SampleNativeApp;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
